@@ -3,15 +3,15 @@ from typing import Optional
 
 class Settings(BaseSettings):
     # 데이터베이스 설정
-    DATABASE_URL: str = "mysql+pymysql://root:password@localhost:3306/quiz_db"
+    DATABASE_URL: str = ""
     
     # JWT 설정
-    SECRET_KEY: str = "dev_temporary_secret_key"
+    SECRET_KEY: str = ""
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
     
     # OpenAI 설정
-    OPENAI_API_KEY: str = "dummy_key_for_development"  # 개발 환경용 더미 키
+    OPENAI_API_KEY: str = ""  # 개발 환경용 더미 키
     
     # Weaviate 설정
     WEAVIATE_URL: str = "http://localhost:8080"
