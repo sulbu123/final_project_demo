@@ -101,60 +101,8 @@ AI 기반 도로 주행 영상 분석 및 퀴즈 생성 서비스입니다. 자�
 - 유사 문제 검색
 - 컨텍스트 기반 추천
 
-## 설치 및 실행 방법 🚀
 
-### 1. 환경 설정
-```bash
-# 가상환경 생성 및 활성화
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
 
-# 의존성 설치
-pip install -r requirements.txt
-cd frontend && npm install
-```
-
-### 2. 데이터베이스 설정
-```bash
-# MariaDB 데이터베이스 생성
-mysql -u root -p
-CREATE DATABASE quiz_db;
-
-# 테이블 생성
-python backend/init_db.py
-```
-
-### 3. 서비스 실행
-```bash
-# 백엔드 실행
-cd backend && python main.py
-
-# 프론트엔드 실행 (새 터미널)
-cd frontend && npm start
-```
-
-## API 문서 📚
-- Swagger UI: http://localhost:8000/docs
-- ReDoc: http://localhost:8000/redoc
-
-## 환경 변수 설정 ⚙️
-
-1. `.env.example` 파일을 `.env`로 복사합니다:
-```bash
-cp .env.example .env
-```
-
-2. `.env` 파일을 열고 필요한 환경 변수 값을 설정합니다:
-- `DB_PASSWORD`: 데이터베이스 비밀번호
-- `SECRET_KEY`: JWT 토큰 암호화 키 (무작위 문자열)
-- `OPENAI_API_KEY`: OpenAI API 키
-- 기타 필요한 설정 값들
-
-⚠️ **주의사항**
-- `.env` 파일은 절대로 Git에 커밋하지 마세요!
-- 실제 운영 환경의 시크릿 키는 충분히 복잡하게 생성하세요.
-- API 키와 비밀번호는 주기적으로 변경하는 것을 권장합니다.
-```
 
 ## 개발 현황 🔄
 
